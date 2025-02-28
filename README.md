@@ -3,5 +3,8 @@
 ---
 
 ## Atividades de Banco de Dados
-### Modelo conceituak
-![modelo de estrutura de banco de dados](modelo_conceitual.png)
+### Modelagem Conceitual
+![modelo conceitual de estrutura de banco de dados](modelo-conceitual.png)
+
+### Modelagem Lógica
+![modelo logico de estrutura de banco de dados](modelo-logico.png)
