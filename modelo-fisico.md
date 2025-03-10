@@ -1,3 +1,4 @@
+
 ```sql
 CREATE DATABASE tecinternet_escola_viana CHARACTER SET utf8mb4; 
 
