@@ -39,3 +39,70 @@ ALTER TABLE alunos
     ADD CONSTRAINT fk_alunos_cursos
     FOREIGN KEY (curso_id) REFERENCES cursos(id_curso);
 ```
+
+```sql
+INSERT INTO cursos(nome_do_curso, carga_horaria)
+VALUE (
+    'Front-End',
+    40
+),
+(
+    'Back-End',
+    80
+),
+(
+    'UX/UI Design',
+    30
+),
+(
+    'Figma',
+    10
+),
+(
+    'Redes de Computadores',
+    100
+);
+
+INSERT INTO professores(nome_professor, area_de_atuacao, curso_id)
+VALUE (
+    'Jon Oliva',
+    'infra',
+    5
+),
+(
+    'Lemmy Kilmister',
+    'design',
+    4
+),
+(
+    'Neil Peart',
+    'design',
+    3
+),
+(
+    'Ozzy Osbourne',
+    'desenvolvimento',
+    2
+),
+(
+    'David Gilmour',
+    'desenvolvimento',
+    1
+);
+```
+
+```sql
+UPDATE cursos SET professor_id = 5
+WHERE id_curso = 1;
+
+UPDATE cursos
+SET professor_id = CASE
+    WHEN id_curso = 2 THEN 4
+    WHEN id_curso = 3 THEN 3
+    WHEN id_curso = 4 THEN 2
+    WHEN id_curso = 5 THEN 1
+
+    ELSE professor_id 
+END
+WHERE id_curso IN (2, 3, 4, 5);
+```
