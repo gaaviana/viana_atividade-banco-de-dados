@@ -1,20 +1,3 @@
-# viana_atividade-banco-de-dados
-
----
-
-## Atividades de Banco de Dados
-### Modelagem Conceitual
-![modelo conceitual de estrutura de banco de dados](modelo-conceitual.png)
-
----
-
-### Modelagem Lógica
-![modelo logico de estrutura de banco de dados](modelo-logico.png)
-
----
-
-###
-
 ```sql
 CREATE DATABASE tecinternet_escola_viana CHARACTER SET utf8mb4; 
 
@@ -41,4 +24,18 @@ CREATE TABLE alunos (
     nota2 DECIMAL(5,2) NOT NULL,
     curso_id INT NOT NULL -- chave estrangeira
 );
+```
+
+```sql
+ALTER TABLE professores 
+    ADD CONSTRAINT fk_professores_cursos
+    FOREIGN KEY (curso_id) REFERENCES cursos(id_curso);
+
+ALTER TABLE cursos
+    ADD CONSTRAINT fk_cursos_professores
+    FOREIGN KEY (professor_id) REFERENCES professores(id_professor);
+
+ALTER TABLE alunos 
+    ADD CONSTRAINT fk_alunos_cursos
+    FOREIGN KEY (curso_id) REFERENCES cursos(id_curso);
 ```
