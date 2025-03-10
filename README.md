@@ -4,12 +4,12 @@
 
 ## Atividades de Banco de Dados
 ### Modelagem Conceitual
-![modelo conceitual de estrutura de banco de dados](modelo-conceitual.png)
+![modelo conceitual de estrutura de banco de dados](/modelos/modelo-conceitual.png)
 
 ---
 
 ### Modelagem Lógica
-![modelo logico de estrutura de banco de dados](modelo-logico.png)
+![modelo logico de estrutura de banco de dados](/modelos/modelo-logico.png)
 
 ---
 
