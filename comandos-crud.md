@@ -113,7 +113,8 @@ SELECT
 ```sql
 SELECT nome_aluno,
     TIMESTAMPDIFF(YEAR, data_de_nascimento, '2025-03-12') AS idade
-FROM alunos;
+FROM alunos
+GROUP BY nome_aluno;
 -- TIMESTAMPDIFF: calcula a diferença entre as data (medida de calculo, primeira data, segunda data)
 ```
 
