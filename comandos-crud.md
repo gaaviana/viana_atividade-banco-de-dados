@@ -1,3 +1,5 @@
+# CRUD - Consultas 
+
 1) Faça uma consulta que mostre os alunos que nasceram antes do ano 2009
 
 ```sql
@@ -105,8 +107,18 @@ SELECT
     ORDER BY alunos;
 ```
 
-🔥 DESAFIOS 🔥
-Criar uma consulta que calcule a idade do aluno
-Criar uma consulta que calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média maior ou igual a 7.
-Criar uma consulta que calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média menor que 7.
-Criar uma consulta que mostre a quantidade de alunos com média maior ou igual a 7.
+## 🔥 DESAFIOS 🔥
+1. Criar uma consulta que calcule a idade do aluno
+
+```sql
+SELECT nome_aluno,
+    TIMESTAMPDIFF(YEAR, data_de_nascimento, '2025-03-12') AS idade
+FROM alunos;
+-- TIMESTAMPDIFF: calcula a diferença entre as data (medida de calculo, primeira data, segunda data)
+```
+
+2. Criar uma consulta que calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média maior ou igual a 7.
+
+3. Criar uma consulta que calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média menor que 7.
+
+4. Criar uma consulta que mostre a quantidade de alunos com média maior ou igual a 7.
