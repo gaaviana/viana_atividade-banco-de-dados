@@ -91,5 +91,22 @@ WHERE id_curso = 4;
 
 12) Faça uma consulta que exclua um aluno do curso de Redes de Computadores e um aluno do curso de UX/UI.
 
+```sql
+DELETE FROM alunos WHERE id_alunos IN (7, 5); -- aluno de ux 7, aluno de redes de computadores 5
+```
 
 13) Faça uma consulta que mostre a lista de alunos atualizada e o título dos cursos que fazem, classificados pelo nome do aluno.
+
+```sql
+SELECT
+    alunos.nome_aluno AS alunos
+    cursos.nome_do_curso 
+    FROM alunos JOIN cursos ON alunos.curso_id = cursos.id_curso
+    ORDER BY alunos;
+```
+
+🔥 DESAFIOS 🔥
+Criar uma consulta que calcule a idade do aluno
+Criar uma consulta que calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média maior ou igual a 7.
+Criar uma consulta que calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média menor que 7.
+Criar uma consulta que mostre a quantidade de alunos com média maior ou igual a 7.
