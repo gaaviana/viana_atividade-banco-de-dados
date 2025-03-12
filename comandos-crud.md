@@ -70,6 +70,18 @@ GROUP BY cursos.nome_do_curso;
 
 ```
 10) Faça uma consulta que mostre o nome dos alunos, suas notas, médias, e o título dos cursos que fazem. Devem ser considerados somente os alunos de Front-End e Back-End. Mostre os resultados classificados pelo nome do aluno.
+
+```sql
+SELECT 
+    alunos.nome_aluno AS alunos,
+    alunos.nota1,
+    alunos.nota2,
+    ROUND((alunos.nota1 + alunos.nota2) / 2.0, 2) AS media_notas,
+    cursos.nome_do_curso AS cursos
+FROM alunos JOIN cursos ON alunos.curso_id = cursos.id_curso
+WHERE cursos.nome_do_curso IN ('Front-End', 'Back-End') -- IN verifica valores dentro de uma lista 
+ORDER BY alunos;
+```
 11) Faça uma consulta que altere o nome do curso de Figma para Adobe XD e sua carga horária de 10 para 15.
 12) Faça uma consulta que exclua um aluno do curso de Redes de Computadores e um aluno do curso de UX/UI.
 13) Faça uma consulta que mostre a lista de alunos atualizada e o título dos cursos que fazem, classificados pelo nome do aluno.
