@@ -83,5 +83,13 @@ WHERE cursos.nome_do_curso IN ('Front-End', 'Back-End') -- IN verifica valores d
 ORDER BY alunos;
 ```
 11) Faça uma consulta que altere o nome do curso de Figma para Adobe XD e sua carga horária de 10 para 15.
+
+```sql
+UPDATE cursos SET nome_do_curso = 'Adobe XD', carga_horaria = 15
+WHERE id_curso = 4;
+```
+
 12) Faça uma consulta que exclua um aluno do curso de Redes de Computadores e um aluno do curso de UX/UI.
+
+
 13) Faça uma consulta que mostre a lista de alunos atualizada e o título dos cursos que fazem, classificados pelo nome do aluno.
