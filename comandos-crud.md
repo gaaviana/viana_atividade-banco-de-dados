@@ -27,9 +27,6 @@ WHERE area_de_atuacao = 'desenvolvimento';
 
 ```sql
 SELECT area_de_atuacao, COUNT(id_professor) AS QTD FROM professores
-WHERE area_de_atuacao = 'desenvolvimento' 
-    OR area_de_atuacao = 'infra' 
-    OR area_de_atuacao = 'design'
 GROUP BY area_de_atuacao;
 ```
 6) Faça uma consulta que mostre o nome dos alunos, o título e a carga horária dos cursos que fazem.
