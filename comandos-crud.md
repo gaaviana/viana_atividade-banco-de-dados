@@ -119,6 +119,20 @@ FROM alunos;
 
 2. Criar uma consulta que calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média maior ou igual a 7.
 
+```sql
+SELECT nome_aluno, ROUND((nota1 + nota2) / 2.0, 2) AS media_notas 
+FROM alunos
+GROUP BY nome_aluno
+HAVING media_notas >= 7; -- HAVING: usado para filtrar resultados
+```
+
 3. Criar uma consulta que calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média menor que 7.
+
+```sql
+SELECT nome_aluno, ROUND((nota1 + nota2) / 2.0, 2) AS media_notas 
+FROM alunos
+GROUP BY nome_aluno
+HAVING media_notas < 7;
+```
 
 4. Criar uma consulta que mostre a quantidade de alunos com média maior ou igual a 7.
