@@ -137,3 +137,9 @@ HAVING media_notas < 7;
 ```
 
 4. Criar uma consulta que mostre a quantidade de alunos com média maior ou igual a 7.
+
+```sql
+SELECT COUNT(*) AS aprovados -- COUNT(*): utilizado para contar as linhas de toda a tabela, por isso o uso do * 
+FROM alunos
+WHERE (nota1 + nota2) / 2 >= 7; 
+```
