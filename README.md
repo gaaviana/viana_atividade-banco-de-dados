@@ -214,3 +214,4 @@ SET data_de_nascimento = CASE
 END
 WHERE id_aluno IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 ```
+
