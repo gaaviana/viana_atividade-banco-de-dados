@@ -50,7 +50,7 @@ SELECT
     cursos.nome_do_curso AS curso
 FROM professores JOIN cursos
 ON professores.curso_id = cursos.id_curso
-ORDEM BY
+ORDER BY professor;
 ```
 8) Faça uma consulta que mostre o nome dos alunos, o título dos cursos que fazem, e o professor de cada curso.
 9) Faça uma consulta que mostre a quantidade de alunos que cada curso possui. Classifique os resultados em ordem descrecente de acordo com a quantidade de alunos.
